@@ -439,6 +439,19 @@ body {
 
 .booking {
   position: relative; }
+  .booking__disable {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(85, 197, 122, 0.7);
+    z-index: 1000000; }
+  .booking__btn {
+    position: fixed !important;
+    left: 43%;
+    top: 48%;
+    z-index: 99999999; }
   .booking__container {
     width: 75%;
     position: absolute;
@@ -740,6 +753,78 @@ body {
     top: 2rem;
     transition: all .1s; }
     .popup__close:hover {
+      color: #55c57a; }
+
+.profile {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  background-color: rgba(0, 0, 0, 0.85);
+  transition: all .3s; }
+  .profile:target {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible; }
+  .profile:target .profile__box {
+    transform: translate(-50%, -50%) scale(1); }
+  .profile__box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 80%;
+    background-color: white;
+    border-radius: 3px;
+    display: table;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all .3s; }
+    @media (max-width: 56.25em) {
+      .profile__box {
+        display: block; } }
+  .profile__col-1 {
+    width: 45%;
+    display: table-cell; }
+    .profile__col-1 img {
+      width: 100%;
+      display: block; }
+      @media (max-width: 56.25em) {
+        .profile__col-1 img:not(:last-child) {
+          width: 50%; } }
+      @media (max-width: 56.25em) {
+        .profile__col-1 img {
+          width: 50%;
+          display: inline-block;
+          float: left; } }
+    @media (max-width: 56.25em) {
+      .profile__col-1 {
+        display: block;
+        width: 100%; } }
+  .profile__col-2 {
+    width: 55%;
+    padding: 4.5rem;
+    display: table-cell;
+    vertical-align: top; }
+    @media (max-width: 75em) {
+      .profile__col-2 {
+        vertical-align: middle;
+        padding: 1.5rem 2rem; } }
+    @media (max-width: 56.25em) {
+      .profile__col-2 {
+        vertical-align: top;
+        text-align: center; } }
+  .profile__close {
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #777;
+    position: absolute;
+    right: 2.5rem;
+    top: 2rem;
+    transition: all .1s; }
+    .profile__close:hover {
       color: #55c57a; }
 
 .header {
