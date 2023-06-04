@@ -85,17 +85,17 @@ prevBtn.forEach((btn) =>
 
 
 
-// navLink.forEach((link) =>
-//   link.addEventListener("click", () => {
-  //     checkBox.checked = false;
-//   })
-// );
+navLink.forEach((link) =>
+  link.addEventListener("click", () => {
+      checkBox.checked = false;
+  })
+);
 
 
 
 
 
-
+let counter = 2;
 let counterEsp = 2;
 let especeContainer
 
@@ -103,6 +103,7 @@ btnMoreEsp.forEach((btnEsp) =>
   btnEsp.addEventListener("click", (e) => {
     especeContainer = btnEsp.closest(".booking__espece-container-1").querySelector(".booking__form-group");
     counter1 = 2
+    counter = 2
 
     console.log(counterEspCon)
     console.log(especeContainer)
@@ -170,7 +171,6 @@ const varitieBtns = document.querySelectorAll('a[data-type="varitie"]');
   
 // }
 
-let counter = 2;
 
 
 btnMore.forEach((btn) =>
@@ -205,3 +205,43 @@ let counter1 = 2
 
 
 
+// ----------------------------------------------
+const userRow = document.querySelectorAll('.user__info')
+const userData = document.querySelector(".info")
+const overlay = document.querySelector(".overlay")
+const closeBtn = document.querySelector('.close')
+const btnPlus = document.querySelectorAll(".btn--plus")
+
+btnPlus.forEach(btn => btn.addEventListener("click", ()=> {
+	console.log("hhhh")
+	userData.classList.toggle('hidden')
+	overlay.classList.toggle('hidden')
+}))
+
+closeBtn.addEventListener('click', ()=> {
+	userData.classList.toggle("hidden")
+	overlay.classList.toggle("hidden")
+})
+
+
+// button control section 
+
+const arrows = document.querySelectorAll('.arrow-icon')
+const btns = document.querySelectorAll('.action--btn')
+const titles = document.querySelectorAll('.action--title')
+
+
+arrows.forEach(arrow => arrow.addEventListener('click', ()=> {
+	let data = arrow.dataset.control
+	btns.forEach(btn => {
+		if(btn.dataset.control === data) {
+			btn.classList.toggle('hidden-btn')
+			arrow.classList.toggle('rotate--arrow')
+		}
+	})
+	titles.forEach(title => {
+		if(title.dataset.control === data) {
+			title.classList.toggle('title--color')
+		}
+	})
+}))
