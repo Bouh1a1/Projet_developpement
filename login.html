@@ -16,14 +16,17 @@
     </div>
     <form action="#" class="login__form">
        <div class="field">
-          <input type="text" required class="field__input">
-          <label class="field__label">Adresse e-mail / ICE</label>
+          <input type="text" required class="field__input login--email">
+          <label class="field__label login-email-label">Adresse e-mail / ICE</label>
        </div>
        <div class="field">
           <input type="password" required class="field__input login__password">
           <span class="field__eye"><i class="fa-sharp fa-solid fa-eye" style="color: #999999; "></i></span>
-          <label class="field__label">Mot de passe</label>
+          <label class="field__label login-pass-label">Mot de passe</label>
        </div>
+       <p class="field__login-error-msg">
+         L'adresse e-mail ou mot de passe entré est incorrect
+      </p>
        <div class="content">
           <div class="checkbox">
              <input type="checkbox" id="remember-me">
